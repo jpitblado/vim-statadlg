@@ -75,7 +75,7 @@ syn keyword dlgOption numonly		contained
 
 " Control options that take arguments
 syn region dlgOption start=/contents(/		end=/)/	oneline contains=dlgString contained
-syn region dlgOption start=/default(/		end=/)/	oneline contains=dlgString contained
+syn region dlgOption start=/default(/		end=/)/	oneline contains=dlgString,cFunc contained
 syn region dlgOption start=/error(/		end=/)/	oneline contains=dlgString contained
 syn region dlgOption start=/label(/		end=/)/	oneline contains=dlgString
 syn region dlgOption start=/tooltip(/		end=/)/	        contains=dlgString
@@ -93,6 +93,8 @@ syn region dlgOption start=/tabtitle(/		end=/)/	oneline contains=dlgString
 syn region dlgOption start=/value(/		end=/)/	oneline contains=dlgString contained
 syn region dlgOption start=/values(/		end=/)/	oneline contains=dlgString contained
 syn region dlgOption start=/view(/		end=/)/	oneline
+
+syn region cFunc start=/c(/ end=/)/   oneline contained
 
 " PROGRAM sub-commands
 syn keyword dlgProgram allowxi		contained
